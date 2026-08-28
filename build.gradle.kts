@@ -3,7 +3,7 @@ import java.io.File
 
 plugins {
     java
-    id("net.minecraftforge.gradle") version "6.0.24"
+    id("net.minecraftforge.gradle") version "6.0.16"
     id("eclipse")
     id("idea")
 }
@@ -37,11 +37,8 @@ dependencies {
 }
 
 minecraft {
-    // Mappings channel and version
-    mappings(channel = "official", version = "1.20.1")
-    
-    // Access transformers
-    accessTransformer(file("src/main/resources/META-INF/accesstransformer.cfg"))
+    // Mappings channel and version - use positional arguments
+    mappings("official", "1.20.1")
     
     copyIdeResources = true
     runs {
