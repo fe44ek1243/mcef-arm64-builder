@@ -1,0 +1,16 @@
+--- a/src/main/java/com/mojang/minecraft/client/main/Main.java
++++ b/src/main/java/com/mojang/minecraft/client/main/Main.java
+@@ -1,6 +1,10 @@
+ package com.mojang.minecraft.client.main;
+ 
++import com.mcef.arm64.McefJniLoader;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
+ public class Main {
++    private static final Logger LOGGER = LoggerFactory.getLogger("MCEF Patch");
+     
+     public static void main(String[] args) {
++        LOGGER.info("Loading MCEF ARM64 initialization");
++        McefJniLoader.loadLibraries();
+     }

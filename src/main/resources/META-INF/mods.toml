@@ -1,0 +1,30 @@
+modLoader="javafxmod"
+loaderVersion="[47,)"
+license="GPLv3"
+
+[[mods]]
+modId="mcef_arm64"
+version="1.20.1-0.1.0"
+displayName="MCEF ARM64"
+displayURL="https://github.com/fe44ek1243/mcef-arm64-builder"
+logoFile=""
+credits="Based on MCEF by montoyo, forked for ARM64 support"
+authors="MCEF Contributors"
+description="""Minecraft Chromium Embedded Framework (MCEF) compiled for ARM64 architecture.
+Enables CEF-based in-game web rendering on ARM64 devices including Android phones and tablets.
+Complementary mod for displaying web content within Minecraft.
+"""
+
+[[dependencies.mcef_arm64]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.mcef_arm64]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.20.2)"
+    ordering="NONE"
+    side="BOTH"
